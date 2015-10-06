@@ -1,7 +1,7 @@
 <div data-ng-controller="AuthenticationController">
     <div class="panel panel-default col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8">
         <div class="panel-heading">
-            <div class="panel-title">eTect Clinical Study</div>
+            <div class="panel-title">Clinical Study</div>
         </div>
         <div class="panel-body">
             <form data-ng-submit="signin()" class="signin form-horizontal" autocomplete="off">
@@ -21,6 +21,9 @@
                     </div>
                     <div class="text-center form-group">
                         <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                    </div>
+                    <div class="text-center form-group">
+                        <button ng-click="bypassLog()" type="submit" class="btn btn-primary btn-block">Bypass</button>
                     </div>
                     <alert type="danger" data-ng-show="error" class="clearfix text-center text-danger">
                         <span data-ng-bind="error"></span>

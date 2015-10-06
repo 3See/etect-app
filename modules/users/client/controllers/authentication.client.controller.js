@@ -4,6 +4,11 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
   function ($scope, $state, $http, $location, $window, Authentication) {
     $scope.authentication = Authentication;
 
+    $scope.bypassLog = function() {
+        Authentication.user = true;
+        $location.path('/');
+    };
+
     // Get an eventual error defined in the URL query string:
     $scope.error = $location.search().err;
 
