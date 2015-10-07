@@ -3,15 +3,6 @@
   margin-bottom:10px;
 }
 
-h1 {
-  font-weight:bold;
-  color:rgb(221,85,38);
-}
-
-body{
-  background-color:rgb(31,57,111);
-}
-
 /*header styling*/
 .header-bar{
   background-color:orange;
