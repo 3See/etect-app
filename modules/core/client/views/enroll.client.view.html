@@ -1,0 +1,244 @@
+<section data-ng-controller="EnrollController">
+  <!--Title Bar-->
+  <div class="container header-bar">
+    <img class="logo" src="http://i736.photobucket.com/albums/xx1/Cory_Turco/header.php_zpsnnwvbddh.png">
+    <h1 class="head" align="center">Enrollment</h1>
+    <div class="dropdown logout">
+      <button class="btn btn-default dropdown-toggle" type="button" id="logout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        {{username}}
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="logout">
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </div>
+  </div>  
+  <!--Breadcrumbs
+			Need to figure out how to get the individual study name and subject name-->
+  <ul class="breadcrumb">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="study.html">{{current_study}}</a>
+    </li>
+    <li class="active">Enroll</li>
+  </ul>
+  <div id="enroll-form">
+    <form>
+    <!--Subject Contact-->
+    <div align="center" class="container">
+      <h1>
+        <u>Subject</u>
+      </h1>
+      <!--Name-->
+      <div class="row add_spacing" style="white-space:nowrap">
+        <!--Title-->
+        <select name="Title" style="width:55px; height:30px" ng-model="title">
+          <option value="">Title</option>
+          <option value=""></option>
+          <option value="Dr">Dr</option>
+          <option value="Ms">Ms</option>
+          <option value="Miss">Miss</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Mr">Mr</option>
+        </select>
+        <!--First Name-->
+        <input name="First_Name" ng-model="firstname" type="text" style="width:150px; height:30px" placeholder="First Name" autocomplete="off" required/>
+        <!--Middle Initial-->
+        <input name="Middle_Initial" ng-model="middleinitial" type="text" style="width:50px; height:30px" placeholder="MI" autocomplete="off" required/>
+        <!--Last Name-->
+        <input name="Last_Name" ng-model="lastname" type="text" style="width:150px; height:30px" placeholder="Last name" autocomplete="off" required/>
+        <!--Suffix-->
+        <select name="Suffix" ng-model="suffix" style="width:70px; height:30px">
+          <option value="">Suffix</option>
+          <option value=""></option>
+          <option value="Jr">Jr</option>
+          <option value="Sr">Sr</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+        </select>
+      </div>
+      <!--Address-->
+      <div class="row add_spacing" style="white-space:nowrap">
+        <!--Street Address-->
+        <input name="Street_Address" ng-model="streetaddress1" type="text" style="width:200px; height:30px" placeholder="Street Address" autocomplete="off" required/>
+        <!--City-->
+        <input name="City" ng-model="city1" type="text" style="width:155px; height:30px" placeholder="City" autocomplete="off" required/>
+        <!--State-->
+        <select name="State" ng-model="state1" style="height:30px" required>
+          <option value="">St</option>
+          <option value="AL">AL</option>
+          <option value="AK">AK</option>
+          <option value="AZ">AZ</option>
+          <option value="AR">AR</option>
+          <option value="CA">CA</option>
+          <option value="CO">CO</option>
+          <option value="CT">CT</option>
+          <option value="DE">DE</option>
+          <option value="DC">DC</option>
+          <option value="FL">FL</option>
+          <option value="GA">GA</option>
+          <option value="HI">HI</option>
+          <option value="ID">ID</option>
+          <option value="IL">IL</option>
+          <option value="IN">IN</option>
+          <option value="IA">IA</option>
+          <option value="KS">KS</option>
+          <option value="KY">KY</option>
+          <option value="LA">LA</option>
+          <option value="ME">ME</option>
+          <option value="MD">MD</option>
+          <option value="MA">MA</option>
+          <option value="MI">MI</option>
+          <option value="MN">MN</option>
+          <option value="MS">MS</option>
+          <option value="MO">MO</option>
+          <option value="MT">MT</option>
+          <option value="NE">NE</option>
+          <option value="NV">NV</option>
+          <option value="NH">NH</option>
+          <option value="NJ">NJ</option>
+          <option value="NM">NM</option>
+          <option value="NY">NY</option>
+          <option value="NC">NC</option>
+          <option value="ND">ND</option>
+          <option value="OH">OH</option>
+          <option value="OK">OK</option>
+          <option value="OR">OR</option>
+          <option value="PA">PA</option>
+          <option value="RI">RI</option>
+          <option value="SC">SC</option>
+          <option value="SD">SD</option>
+          <option value="TN">TN</option>
+          <option value="TX">TX</option>
+          <option value="UT">UT</option>
+          <option value="VT">VT</option>
+          <option value="VA">VA</option>
+          <option value="WA">WA</option>
+          <option value="WV">WV</option>
+          <option value="WI">WI</option>
+          <option value="WY">WY</option>
+        </select>
+        <!--Zipcode-->
+        <input name="Zipcode" ng-model="zipcode1" type="number" style="width:75px; height:30px" placeholder="Zipcode" autocomplete="off" required/>
+      </div>
+      <div class="row add_spacing" style="white-space:nowrap">
+        <!--Street Address-->
+        <input name="Street_Address2" ng-model="streetaddress2" type="text" style="width:200px; height:30px" placeholder="Street Address" autocomplete="off" />
+        <!--City-->
+        <input name="City2" ng-model="city2" type="text" style="width:155px; height:30px" placeholder="City" autocomplete="off" />
+        <!--State-->
+        <select name="State2" ng-model="state2" style="height:30px">
+          <option value="">St</option>
+          <option value="AL">AL</option>
+          <option value="AK">AK</option>
+          <option value="AZ">AZ</option>
+          <option value="AR">AR</option>
+          <option value="CA">CA</option>
+          <option value="CO">CO</option>
+          <option value="CT">CT</option>
+          <option value="DE">DE</option>
+          <option value="DC">DC</option>
+          <option value="FL">FL</option>
+          <option value="GA">GA</option>
+          <option value="HI">HI</option>
+          <option value="ID">ID</option>
+          <option value="IL">IL</option>
+          <option value="IN">IN</option>
+          <option value="IA">IA</option>
+          <option value="KS">KS</option>
+          <option value="KY">KY</option>
+          <option value="LA">LA</option>
+          <option value="ME">ME</option>
+          <option value="MD">MD</option>
+          <option value="MA">MA</option>
+          <option value="MI">MI</option>
+          <option value="MN">MN</option>
+          <option value="MS">MS</option>
+          <option value="MO">MO</option>
+          <option value="MT">MT</option>
+          <option value="NE">NE</option>
+          <option value="NV">NV</option>
+          <option value="NH">NH</option>
+          <option value="NJ">NJ</option>
+          <option value="NM">NM</option>
+          <option value="NY">NY</option>
+          <option value="NC">NC</option>
+          <option value="ND">ND</option>
+          <option value="OH">OH</option>
+          <option value="OK">OK</option>
+          <option value="OR">OR</option>
+          <option value="PA">PA</option>
+          <option value="RI">RI</option>
+          <option value="SC">SC</option>
+          <option value="SD">SD</option>
+          <option value="TN">TN</option>
+          <option value="TX">TX</option>
+          <option value="UT">UT</option>
+          <option value="VT">VT</option>
+          <option value="VA">VA</option>
+          <option value="WA">WA</option>
+          <option value="WV">WV</option>
+          <option value="WI">WI</option>
+          <option value="WY">WY</option>
+        </select>
+        <!--Zipcode-->
+        <input name="Zipcode2" ng-model="zipcode2" type="number" style="width:75px; height:30px" placeholder="Zipcode" autocomplete="off" />
+      </div>
+      <!--Personal Contact-->
+      <div class="row add_spacing" style="white-space:nowrap">
+        <t style="color:white; font-weight:bold">Primary Phone:</t>
+        <input name="Primary_Phone" ng-model="phone1" type="text" style="width:110px; height:30px" placeholder="##########" autocomplete="off" required/>
+        <input name="Primary_Email" ng-model="email1" type="email" style="width:275px; height:30px" placeholder="Primary Email" autocomplete="off" required/>
+      </div>
+      <div class="row add_spacing" style="white-space:nowrap">
+        <t style="color:white; font-weight:bold">Second Phone:</t>
+        <input name="Secondary_Phone" ng-model="phone2" type="text" style="width:110px; height:30px" placeholder="##########" autocomplete="off" />
+        <input name="Secondary_Email" ng-model="email2" type="email" style="width:275px; height:30px" placeholder="Secondary Email" autocomplete="off" />
+      </div>
+      <!--Emergency-->
+      <h1>
+        <u>Emergency Contact Information</u>
+      </h1>
+      <div class="row add_spacing" style="white-space:nowrap">
+        <!--Relationship-->
+        <select name="Relationship1" ng-model="relation1" style="width:110px; height:30px" required>
+          <option value="">Relationship</option>
+          <option value="Mother">Mother</option>
+          <option value="Father">Father</option>
+          <option value="Sibling">Sibling</option>
+          <option value="Spouse">Spouse</option>
+          <option value="Other">Other</option>
+        </select>
+        <input name="R1_First_Name" ng-model="r1firstname" type="text" style="width:150px; height:30px" placeholder="First name" autocomplete="off" required/>
+        <input name="R1_Middle_Initial" ng-model="r1middleinitial" type="text" style="width:50px; height:30px" placeholder="MI" autocomplete="off" required/>
+        <input name="R1_Last_Name" ng-model="r1lastname" type="text" style="width:150px; height:30px" placeholder="Last name" autocomplete="off" required/>
+        <t style="color:white; font-weight:bold">Phone:</t>
+        <input name="R1_Phone" ng-model="r1phone" type="text" style="width:110px; height:30px" placeholder="##########" autocomplete="off" required/>
+      </div>
+      <div class="row add_spacing" style="white-space:nowrap">
+        <!--Relationship-->
+        <select name="Relationship2" ng-model="r2relation" style="width:110px; height:30px">
+          <option value="">Relationship</option>
+          <option value="Mother">Mother</option>
+          <option value="Father">Father</option>
+          <option value="Sibling">Sibling</option>
+          <option value="Spouse">Spouse</option>
+          <option value="Other">Other</option>
+        </select>
+        <input name="R2_First_Name" ng-model="r2firstname" type="text" style="width:150px; height:30px" placeholder="First name" autocomplete="off" />
+        <input name="R2_Middle_Initial" ng-model="r2middleinitial" type="text" style="width:50px; height:30px" placeholder="MI" autocomplete="off" />
+        <input name="R2_Last_Name" type="text" ng-model="r2lastname" style="width:150px; height:30px" placeholder="Last name" autocomplete="off" />
+        <t style="color:white; font-weight:bold">Phone:</t>
+        <input name="R2_Phone" ng-model="r2phone" type="text" style="width:110px; height:30px" placeholder="##########" autocomplete="off" />
+      </div>
+    </div>
+    <div align="center" class="container">
+      <input class="btn btn-default" type="submit" value="Enroll Subject" ng-click="submit()" style="background-color:rgb(221,85,38); color:white"/>
+      <a class="btn btn-default" role="button" ng-click="cancel()" href="#" style="background-color:rgb(221,85,38); color:white">Cancel</a>
+    </div>
+  </form>
+  </div>
+</section>
