@@ -1,0 +1,13 @@
+/*-----table formating-----*/
+#subject_table th {
+  background-color:black;
+  color:white;
+}
+
+#subject_table tr:nth-child(even) {
+  background-color:#eee;
+}
+
+#subject_table tr:nth-child(odd) {
+  background-color:#fff;
+}
