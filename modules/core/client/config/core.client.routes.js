@@ -17,9 +17,13 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
         url: '/not-found',
         templateUrl: 'modules/core/views/404.client.view.html'
       })
-      .state('enrollment', {
-        url: '/study/enrollment'
-        templateUrl: 'modules/core/views/enroll.client.view.html'
-      })
+    .state('sign-in', {
+      url: '/authentication/signin',
+      templateUrl: 'modules/users/views/authentication/signin.client.view.html'
+    })
+    .state('enrollment', {
+      url: '/study/enrollment'
+      templateUrl: 'modules/core/views/enroll.client.view.html'
+    });    
   }
 ]);
