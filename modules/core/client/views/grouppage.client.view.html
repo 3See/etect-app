@@ -1,0 +1,97 @@
+<section ng-controller="GroupPageController">
+  <div class="container header-bar" style="width:100%">
+    <img class="logo" src="http://i736.photobucket.com/albums/xx1/Cory_Turco/header.php_zpsnnwvbddh.png">
+    <h1 class="head" align="center">Group Name</h1>
+    <div class="dropdown logout">
+      <button class="btn btn-default dropdown-toggle" type="button" id="logout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        {{username}}
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="logout">
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </div>
+  </div>  
+  <!--Breadcrumbs Need to figure out how to get the individual study name and subject name-->
+  <ul class="breadcrumb">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="study.html">Study Name</a>
+    </li>
+    <li class="active">Group Name</li>
+  </ul>
+  <!--Graph-->
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <!--Script for making the graph-->
+  <script type="text/javascript">
+
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1.0', {'packages':['corechart']});
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.setOnLoadCallback(drawChart);
+
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+    function drawChart() {
+
+      // Create the data table.
+    var data = google.visualization.arrayToDataTable([
+      ['Genre', 'Taken', 'Missed', { role: 'annotation' } ],
+      ['2010', 10, 24, ''],
+      ['2020', 16, 22, ''],
+      ['2030', 28, 19, '']
+    ]);
+
+    var options = {
+      width: 600,
+      height: 400,
+      legend: { position: 'top', maxLines: 3 },
+      bar: { groupWidth: '75%' },
+      isStacked: true
+    };
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+  </script>
+  
+  <h1 align="center">
+    <u>Compliency</u>
+  </h1>
+  <!--Div that will hold the pie chart-->
+  <div id="chart_div" style="margin: 5% 5%" align="center"></div>
+  <!--list of subjects-->
+  <h1 align="center">
+    <u>Subjects</u>
+  </h1>
+  <table class="table table-condensed" id="subject_table">
+    <tr>
+      <th>Subject ID</th>
+      <th>Reader ID</th>
+      <th>Complience</th>
+    </tr>
+<!--Examples-->
+    <tr>
+      <td>John Doe</td>
+      <td>123</td>
+      <td>Place holder information</td>
+    </tr>
+    <tr>
+      <td>Jane Doe</td>
+      <td>145</td>
+      <td>Place holder information</td>
+    </tr>
+<!----------->      
+    <tr ng-repeat="subject in Subject_list">
+      <td>{{subject.full_name}}</td>
+      <td>{{subject.reader_id}}</td>
+      <td>{{subject.complience}}</td>
+    </tr>
+  </table>
+</section>
