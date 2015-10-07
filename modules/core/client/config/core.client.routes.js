@@ -22,7 +22,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       templateUrl: 'modules/users/views/authentication/signin.client.view.html'
     })
     .state('enrollment', {
-      url: '/study/enrollment'
+      url: '/study/enrollment',
       templateUrl: 'modules/core/views/enroll.client.view.html'
     });    
   }
