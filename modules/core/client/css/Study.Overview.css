@@ -1,0 +1,78 @@
+li.lin {
+
+	display : inline;
+}
+
+img.home_page {
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+img.study_page {
+  width : 20%;
+  height: 20%;
+}
+
+h1.study_page {
+  font-size: 5vw;
+  bottom: 20%;
+  text-align: center;
+  vertical-align: bottom;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+table.studyTable {
+
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+
+
+div.studyTitle {
+  position: relative;
+  width: 80%;
+  top: 20%;
+}
+
+td.study_page {
+  padding-bottom: 0px;
+  vertical-align: bottom;
+}
+
+div.enroll_button {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
+
+
+
+#buttons li {
+	display: block;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin-bottom: 5px;
+    width: 450px;
+    line-height: 40px;
+
+}
+
+
+.logoutLblPos{
+
+   position:fixed;
+   right:0px;
+   top:0px;
+}
+
+#buttons button {
+
+
+    width: 450px;
+    line-height: 40px;
+
+}

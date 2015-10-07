@@ -32,6 +32,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
             .state('group-info', {
                 url: '/study/group/',
                 templateUrl: 'modules/core/views/groupinfo.client.view.html'
+            })
+            .state('study-info', {
+                url: '/study-info',
+                templateUrl: 'modules/core/views/studyinfo.client.view.html'
             });
     }
 ]);
