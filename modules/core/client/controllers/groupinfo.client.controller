@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('core').controller('GroupPageController', ['$scope', 'Authentication', '$location'
+angular.module('core').controller('GroupInfoController', ['$scope', 'Authentication', '$location',
   function ($scope, Authentication, $location) {
     // This provides Authentication context.
     $scope.authentication = Authentication;
