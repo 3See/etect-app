@@ -20,6 +20,14 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
     .state('sign-in', {
       url: '/authentication/signin',
       templateUrl: 'modules/users/views/authentication/signin.client.view.html'
+    })
+
+
+
+
+    .state('group-info', {
+      url: '/study/group/',
+      templateUrl: 'modules/core/views/groupinfo.client.view.html'
     });
   }
 ]);
