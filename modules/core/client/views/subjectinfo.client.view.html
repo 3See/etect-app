@@ -1,114 +1,103 @@
-<!DOCTYPE html>
-<html>
+<div id="todo" class="container-fluid" ng-controller="MainCtrl">
 
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/0.3.3/ng-table.min.js"></script>
-
-    <link rel="stylesheet" href="style.css" />
-    <script src="script-subject.js"></script>
-  </head>
-
-  <body ng-app="app">
     <h1 class="text-center">Subject Name</h1>
-    
-    <div id="todo" class="container-fluid" ng-controller="MainCtrl">
-  
-      <div class="row" ng-repeat="subject in info">
+
+    <div class="row" ng-repeat="subject in info">
         <div class="col-sm-6">
 
-          <!-- Patient  ID -->
-          <p>Patient ID: {{subject.patientID}}
-          </p>
+            <!-- Patient  ID -->
+            <p>Patient ID: {{subject.patientID}}
+            </p>
 
-          <!-- Patients  Full Name -->
-          <p>Full Name: {{subject.fullName}}
-          </p>
+            <!-- Patients  Full Name -->
+            <p>Full Name: {{subject.fullName}}
+            </p>
 
-          <!-- Reader ID -->
-          <p>Reader ID: {{subject.readerID}}
-          </p>
+            <!-- Reader ID -->
+            <p>Reader ID: {{subject.readerID}}
+            </p>
 
-          <!-- Start Date -->
-          <p>Start Date: {{subject.startDate}}
-          </p>
+            <!-- Start Date -->
+            <p>Start Date: {{subject.startDate}}
+            </p>
 
-          <!-- End Date -->
-          <p>End Date: {{subject.endDate}}
-          </p>
+            <!-- End Date -->
+            <p>End Date: {{subject.endDate}}
+            </p>
 
-          <br />
-          <!-- layout for addresses: -->
-          <div class="row">
-            <div class="col-sm-9"> 
-              <!-- Display Addresses -->
-              <p> Address: {{subject.address}} </p>
-              <p> Address 2: {{subject.address2}} </p>
+            <br/>
+            <!-- layout for addresses: -->
+            <div class="row">
+                <div class="col-sm-9">
+                    <!-- Display Addresses -->
+                    <p> Address: {{subject.address}} </p>
 
-            </div>
-          </div>
+                    <p> Address 2: {{subject.address2}} </p>
 
-          <br />
-          <!-- layout for phone #'s: -->
-          <div class="row">
-            <div class="col-sm-9"> 
-              <!-- Display numbers -->
-              <p> Phone: {{subject.phone}} </p>
-              <p> Phone 2: {{subject.phone2}} </p>
-              
-            </div>
-          </div>
-
-          <!-- layout for emergency contacts: -->
-          <div class="row">
-            <div class="col-sm-9"> 
-              <!-- Display header -->
-              <h3> Emergency Contact Information </h3>
-              
-            </div>
-
-
-            <!-- Display the contact info -->
-            <div class="row col-sm-12" ng-repeat="contact in subject.emergencyContacts">
-
-                <div class="col-sm-4"> 
-                  <p>Name: {{contact.name}}</p>
                 </div>
-                <div class="col-sm-4"> 
-                  <p> Relationship: {{contact.relationship}}</p>
+            </div>
+
+            <br/>
+            <!-- layout for phone #'s: -->
+            <div class="row">
+                <div class="col-sm-9">
+                    <!-- Display numbers -->
+                    <p> Phone: {{subject.phone}} </p>
+
+                    <p> Phone 2: {{subject.phone2}} </p>
+
                 </div>
-                <div class="col-sm-4"> 
-                  <p> Phone: {{contact.phone}}</p>
+            </div>
+
+            <!-- layout for emergency contacts: -->
+            <div class="row">
+                <div class="col-sm-9">
+                    <!-- Display header -->
+                    <h3> Emergency Contact Information </h3>
+
                 </div>
 
 
+                <!-- Display the contact info -->
+                <div class="row col-sm-12" ng-repeat="contact in subject.emergencyContacts">
+
+                    <div class="col-sm-4">
+                        <p>Name: {{contact.name}}</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p> Relationship: {{contact.relationship}}</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p> Phone: {{contact.phone}}</p>
+                    </div>
+
+
+                </div>
+
             </div>
+            <!-- Edit column -->
+            <button class="btn btn-default" type="button" ng-click="editSubject()">Edit</button>
+            </p>
 
-          </div>
-          <!-- Edit column -->
-          <button class="btn btn-default" type="button" ng-click="editSubject()">Edit</button></p>
-
-          <!-- End of left column -->
+            <!-- End of left column -->
         </div>
 
-        <div class="col-sm-6"> 
-          <p>PLACE HOLDER FOR COMPLIANCE VERIFICATION</p>
-          <br />
-          <p>PLACE HOLDER FOR COMPLIANCE VERIFICATION</p>
-          <br />
-          <p>PLACE HOLDER FOR COMPLIANCE VERIFICATION</p>
-          <br />
-          <p>PLACE HOLDER FOR COMPLIANCE VERIFICATION</p>
-          <br />
-          <p>PLACE HOLDER FOR COMPLIANCE VERIFICATION</p>
-          <br />
+        <div class="col-sm-6">
+            <p>PLACE HOLDER FOR COMPLIANCE VERIFICATION</p>
+            <br/>
+
+            <p>PLACE HOLDER FOR COMPLIANCE VERIFICATION</p>
+            <br/>
+
+            <p>PLACE HOLDER FOR COMPLIANCE VERIFICATION</p>
+            <br/>
+
+            <p>PLACE HOLDER FOR COMPLIANCE VERIFICATION</p>
+            <br/>
+
+            <p>PLACE HOLDER FOR COMPLIANCE VERIFICATION</p>
+            <br/>
 
         </div>
-      </div>
     </div>
-    
-  </body>
-
-</html>
+</div>
