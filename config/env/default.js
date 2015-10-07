@@ -3,7 +3,7 @@
 module.exports = {
   app: {
     title: 'eTect Clinical Study',
-    description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
+    description: 'Clinical Study Application for use by eTect',
     keywords: 'mongodb, express, angularjs, node.js, mongoose, passport',
     googleAnalyticsTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'GOOGLE_ANALYTICS_TRACKING_ID'
   },
