@@ -24,6 +24,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
             .state('subject-info', {
                 url: '/subject-info',
                 templateUrl: 'modules/core/views/subjectinfo.client.view.html'
+            })
+            .state('study-info', {
+                url: '/study-info',
+                templateUrl: 'modules/core/views/studyinfo.client.view.html'
             });
     }
 ]);
