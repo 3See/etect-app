@@ -1,7 +1,15 @@
 'use strict';
 
+angular.module('core').controller('SubjectInfoController', ['$scope', 'Authentication', '$state',
+    function ($scope, Authentication, $state) {
 
-angular.module('core').controller('SubjectInfoController', ['$scope', 'Authentication', '$location', function ($scope) {
+    // This provides Authentication context.
+    $scope.authentication = Authentication;
+
+    if (!Authentication.user) {
+        $state.go('sign-in');
+    }
+
     $scope.info = [{
         fullName: "John Doe",
         patientID: "123456789",
@@ -18,33 +26,33 @@ angular.module('core').controller('SubjectInfoController', ['$scope', 'Authentic
             phone: "813-555-3636"
         }]
     }];
-$scope.newItem = "";
+    $scope.newItem = "";
     $scope.todos = [];
 
-$scope.addItem = function () {
-    console.log("in add");
-    if ($scope.newItem !== "") {
-        var addItem = {name: $scope.newItem, done: false};
-        $scope.todos.push(addItem);
-        $scope.newItem = "";
+    $scope.addItem = function () {
+        console.log("in add");
+        if ($scope.newItem !== "") {
+            var addItem = {name: $scope.newItem, done: false};
+            $scope.todos.push(addItem);
+            $scope.newItem = "";
 
-    }
-};
+        }
+    };
 
-$scope.deleteItem = function (index) {
-    console.log("in delete");
-    $scope.todos.splice(index, 1);
-};
+    $scope.deleteItem = function (index) {
+        console.log("in delete");
+        $scope.todos.splice(index, 1);
+    };
 
-$scope.completeItem = function (index) {
-    console.log("completed item");
-    $scope.todos[index].done = true;
-};
+    $scope.completeItem = function (index) {
+        console.log("completed item");
+        $scope.todos[index].done = true;
+    };
 
-$scope.uncompleteItem = function (index) {
-    console.log("uncompleted item");
-    $scope.todos[index].done = false;
-};
+    $scope.uncompleteItem = function (index) {
+        console.log("uncompleted item");
+        $scope.todos[index].done = false;
+    };
 
 
 }]);

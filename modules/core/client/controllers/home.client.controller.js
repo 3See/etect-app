@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication', '$location',
-  function ($scope, Authentication, $location) {
+angular.module('core').controller('HomeController', ['$scope', 'Authentication', '$state',
+  function ($scope, Authentication, $state) {
     // This provides Authentication context.
     $scope.authentication = Authentication;
 
     // If auth not set goto login
     if(!Authentication.user) {
-      $location.path('/authentication/signin');
+      $state.go('sign-in');
     }
 
   }
