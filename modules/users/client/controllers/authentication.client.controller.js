@@ -6,7 +6,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$stat
 
     $scope.bypassLog = function() {
         Authentication.user = true;
-        $location.path('/');
+        $state.go('home');
     };
 
     // Get an eventual error defined in the URL query string:
