@@ -1,7 +1,15 @@
 'use strict';
 
 
-angular.module('core').controller('SubjectInfoController', ['$scope', 'Authentication', '$location', function ($scope) {
+angular.module('core').controller('SubjectInfoController', ['$scope', 'Authentication', '$state', function ($scope) {
+
+    // This provides Authentication context.
+    $scope.authentication = Authentication;
+
+    if (!Authentication.user) {
+        $state.go('sign-in');
+    }
+
     $scope.info = [{
         fullName: "John Doe",
         patientID: "123456789",
