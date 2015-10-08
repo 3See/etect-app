@@ -7,7 +7,7 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">Logout</a></li>
+                <li><a ui-sref="sign-in">Logout</a></li>
             </ul>
         </div>
     </form>
@@ -22,14 +22,19 @@
     <div top="20%">
         <ul class="breadcrumb" style="width:100%">
             <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">{{current_study}}</a>
+                <a href="#/">Home</a>
             </li>
         </ul>
 
     </div>
+
+    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
+        Group 1
+    </button>
+
+    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo2" ui-sref="group-info">
+        Group 2
+    </button>
 
     <div class="enroll_button">
         <button type="button" class="btn btn-primary" data-toggle="button" ui-sref="enrollment">Enroll New Subject</button>
@@ -50,13 +55,8 @@
             </div>
 
 
-        <div class="accordion" id="accordion2">
-            <div class="accordion-group">
-                <div class="accordion-heading">
-                    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
-                        Group 1
-                    </button>
-                </div>
+
+
                 <div id="demo1" class="collapse">
                     <table class="studyTable">
                         <tr>
@@ -89,9 +89,7 @@
             </div>
             <div class="accordion-group">
                 <div class="accordion-heading">
-                    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo2" ui-sref="group-info">
-                        Group 2
-                    </button>
+
                 </div>
                 <div id="demo2" class="collapse">
                     <div class="accordion-inner">
