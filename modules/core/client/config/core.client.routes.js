@@ -18,23 +18,23 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
                 templateUrl: 'modules/core/views/404.client.view.html'
             })
             .state('sign-in', {
-                url: '/authentication/signin',
+                url: '/authentication-signin',
                 templateUrl: 'modules/users/views/authentication/signin.client.view.html'
             })
             .state('enrollment', {
-                url: '/study/enrollment',
+                url: '/study-enrollment',
                 templateUrl: 'modules/core/views/enroll.client.view.html'
             })
             .state('subject-info', {
-                url: '/subject/info',
+                url: '/subject-info',
                 templateUrl: 'modules/core/views/subjectinfo.client.view.html'
             })
             .state('group-info', {
-                url: '/study/group/',
+                url: '/study-group',
                 templateUrl: 'modules/core/views/groupinfo.client.view.html'
             })
             .state('study-info', {
-                url: '/study/info',
+                url: '/study-info',
                 templateUrl: 'modules/core/views/studyinfo.client.view.html'
             });
     }
