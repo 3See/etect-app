@@ -26,7 +26,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
                 templateUrl: 'modules/core/views/enroll.client.view.html'
             })
             .state('subject-info', {
-                url: '/subject-info',
+                url: '/subject/info',
                 templateUrl: 'modules/core/views/subjectinfo.client.view.html'
             })
             .state('group-info', {
@@ -34,7 +34,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
                 templateUrl: 'modules/core/views/groupinfo.client.view.html'
             })
             .state('study-info', {
-                url: '/study-info',
+                url: '/study/info',
                 templateUrl: 'modules/core/views/studyinfo.client.view.html'
             });
     }
