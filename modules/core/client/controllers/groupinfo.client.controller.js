@@ -5,8 +5,13 @@ angular.module('core').controller('GroupInfoController', ['$scope', 'Authenticat
     // This provides Authentication context.
     $scope.authentication = Authentication;
 
+    // If auth not set goto login
     if(!Authentication.user) {
-    	$state.go('sign-in');
+      $state.go('sign-in');
     }
+
   }
 ]);
+
+
+
