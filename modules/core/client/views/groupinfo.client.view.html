@@ -2,21 +2,25 @@
 
 
 
-    <div class="container header-bar" style="width:100%">
-        <img class="logo" src="http://i736.photobucket.com/albums/xx1/Cory_Turco/header.php_zpsnnwvbddh.png">
-
-        <h1 class="head" align="center">Group Name</h1>
-
+    <div class="row">
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <img class="img-responsive" src="http://i736.photobucket.com/albums/xx1/Cory_Turco/header.php_zpsnnwvbddh.png" />
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <h1 align="center" class="head">Enrollment</h1>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
         <div class="dropdown logout">
-            <button class="btn btn-default dropdown-toggle" type="button" id="logout" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="true">
-                {{username}}
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="logout">
-                <li><a href="#">Log Out</a></li>
-            </ul>
+          <button class="btn btn-default dropdown-toggle" id="logout" aria-expanded="true" aria-haspopup="true" type="button" data-toggle="dropdown">
+            {{username}}<span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="logout">
+            <li>
+              <a href="#">Log Out</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
     <!--Breadcrumbs Need to figure out how to get the individual study name and subject name-->
     <ul class="breadcrumb">
@@ -60,8 +64,7 @@
             <td>145</td>
             <td>Place holder information</td>
         </tr>
-        </a>
-        <!----------->
+        <!---->
         <tr ng-repeat="subject in Subject_list">
             <td>{{subject.full_name}}</td>
             <td>{{subject.reader_id}}</td>
