@@ -28,31 +28,56 @@
 
     </div>
 
+
+
     <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
-        Group 1
+       Group 1
     </button>
 
-    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo2" ui-sref="group-info">
-        Group 2
-    </button>
+
+    <div ng-controller="AccordionCtrl">
+
+
+
+
+      <script type="text/ng-template" id="group-template.html">
+        <div class="panel {{panelClass || 'panel-default'}}">
+          <div class="panel-heading">
+            <h4 class="panel-title" style="color:#fa39c3">
+              <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading"><span
+                ng-class="{'text-muted': isDisabled}">{{heading}}</span></a>
+            </h4>
+
+          </div>
+          <div class="panel-collapse collapse" uib-collapse="!isOpen">
+            <div class="panel-body" style="text-align: right" ng-transclude></div>
+          </div>
+        </div>
+      </script>
+      <accordion close-others="oneAtATime">
+        <accordion-group ng-repeat="group in groups">
+
+
+
+            <accordion-heading>
+                {{group.title}}
+
+                <button type="button" class="btn btn-default pull-right studypage" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
+                    Group Data
+                </button>
+           
+            </accordion-heading>
+            {{group.content}}  
+          
+        </accordion-group>
+      </accordion>
+    </div>
+
+
 
     <div class="enroll_button">
         <button type="button" class="btn btn-primary" data-toggle="button" ui-sref="enrollment">Enroll New Subject</button>
     </div>
-
-
-            <div class="panel {{panelClass || 'panel-default'}}">
-                <div class="panel-heading">
-                    <h4 class="panel-title" style="color:#fa39c3">
-                        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()"
-                           accordion-transclude="heading"><span
-                                ng-class="{'text-muted': isDisabled}">{{heading}}</span></a>
-                    </h4>
-                </div>
-                <div class="panel-collapse collapse" collapse="!isOpen">
-                    <div class="panel-body" style="text-align: right" ng-transclude></div>
-                </div>
-            </div>
 
 
 
