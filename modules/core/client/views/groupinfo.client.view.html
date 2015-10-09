@@ -9,18 +9,6 @@
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <h1 align="center" class="head">Enrollment</h1>
       </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <div class="dropdown logout">
-          <button class="btn btn-default dropdown-toggle" id="logout" aria-expanded="true" aria-haspopup="true" type="button" data-toggle="dropdown">
-            {{username}}<span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="logout">
-            <li>
-              <a href="#">Log Out</a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
     <!--Breadcrumbs Need to figure out how to get the individual study name and subject name-->
     <ul class="breadcrumb">
@@ -60,7 +48,7 @@
         </tr>
 
         <tr>
-            <td>Jane Doe</td>
+            <td><button class="btn" ui-sref="subject-info">Jane Doe</button></td>
             <td>145</td>
             <td>Place holder information</td>
         </tr>
