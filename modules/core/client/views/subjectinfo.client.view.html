@@ -1,29 +1,29 @@
 <div id="todo" class="container-fluid" data-ng-controller="SubjectInfoController">
 
-    <h1 class="text-center">Subject Name</h1>
+    <h1 class="text-center">{{info.fullName}}</h1>
 
-    <!-- Display Non-editing subject page -->
-    <div class="row" ng-repeat="subject in info" ng-show="!editBool">
+    <!-- Display Non-editing info page -->
+    <div class="row" ng-show="!editBool">
         <div class="col-sm-6">
 
           <!-- Patient  ID -->
-          <p>Patient ID: {{subject.patientID}}
+          <p>Patient ID: {{info.patientID}}
           </p>
 
           <!-- Patients  Full Name -->
-          <p>Full Name: {{subject.fullName}}
+          <p>Full Name: {{info.fullName}}
           </p>
 
           <!-- Reader ID -->
-          <p>Reader ID: {{subject.readerID}}
+          <p>Reader ID: {{info.readerID}}
           </p>
 
           <!-- Start Date -->
-          <p>Start Date: {{subject.startDate}}
+          <p>Start Date: {{info.startDate}}
           </p>
 
           <!-- End Date -->
-          <p>End Date: {{subject.endDate}}
+          <p>End Date: {{info.endDate}}
           </p>
 
           <br />
@@ -31,8 +31,8 @@
           <div class="row">
             <div class="col-sm-9"> 
               <!-- Display Addresses -->
-              <p> Address: {{subject.address}} , {{subject.city1}} , {{subject.state1}} , {{subject.zip1}} </p>
-              <p> Address 2: {{subject.address2}} , {{subject.city2}} , {{subject.state2}} , {{subject.zip2}} </p>
+              <p> Address: {{info.address1}} , {{info.city1}} , {{info.state1}} , {{info.zip1}} </p>
+              <p> Address 2: {{info.address2}} , {{info.city2}} , {{info.state2}} , {{info.zip2}} </p>
 
             </div>
           </div>
@@ -42,8 +42,8 @@
           <div class="row">
             <div class="col-sm-9"> 
               <!-- Display numbers -->
-              <p> Phone: {{subject.phone}} </p>
-              <p> Phone 2: {{subject.phone2}} </p>
+              <p> Phone: {{info.phone1}} </p>
+              <p> Phone 2: {{info.phone2}} </p>
               
             </div>
           </div>
@@ -62,16 +62,16 @@
 
                 <div class="col-sm-4"> 
 
-                  <p>Name: {{subject.emergencyContact1.name}}</p>
-                  <p>Name: {{subject.emergencyContact2.name}}</p>
+                  <p>Name: {{info.emergencyContact1.name}}</p>
+                  <p>Name: {{info.emergencyContact2.name}}</p>
                 </div>
                 <div class="col-sm-4"> 
-                  <p> Relationship: {{subject.emergencyContact1.relationship}}</p>
-                  <p> Relationship: {{subject.emergencyContact2.relationship}}</p>
+                  <p> Relationship: {{info.emergencyContact1.relationship}}</p>
+                  <p> Relationship: {{info.emergencyContact2.relationship}}</p>
                 </div>
                 <div class="col-sm-4"> 
-                  <p> Phone: {{subject.emergencyContact1.phone}}</p>
-                  <p> Phone: {{subject.emergencyContact2.phone}}</p>
+                  <p> Phone: {{info.emergencyContact1.phone}}</p>
+                  <p> Phone: {{info.emergencyContact2.phone}}</p>
                 </div>
             </div>
 
@@ -97,32 +97,32 @@
         </div>
     </div>
 
-    <!-- Display editing subject page -->
-    <div class="row" ng-repeat="subject in info" ng-show="editBool">
+      <!-- Display editing info page -->
+    <div class="row" ng-show="editBool">
         <div class="col-sm-7">
-            <!-- Patient  ID -->
-            <p>Patient ID: {{subject.patientID}}
-            </p>
+          <!-- Patient  ID -->
+          <p>Patient ID: {{info.patientID}}
+          </p>
 
-            <div class="row">
-                <div class="col-sm-2">
-                    <p>Full Name: 
-                    </p>
-                </div>
-                <div class="col-sm-3">
-                    <input type="text" ng-model="fullName" class="form-control"></input>
-                </div>
+          <div class="row">
+            <div class="col-sm-2">
+              <p>Full Name: 
+              </p>
             </div>
+            <div class="col-sm-3">
+              <input type="text" ng-model="fullName" class="form-control"></input>
+            </div>
+          </div>
 
-            <div class="row">
-                <div class="col-sm-2">
-                    <p>Group:  
-                    </p>
-                </div>
-                <div class="col-sm-3">
-                    <select data-ng-options="g.name for g in groups" ng-model="groupsDrop" class="form-control"></select>
-                </div>
+          <div class="row">
+            <div class="col-sm-2">
+              <p>Group:  
+              </p>
             </div>
+            <div class="col-sm-3">
+              <select data-ng-options="g.name for g in groups" ng-change="changeGroup(groupsDrop, {{groupsDrop}})" ng-model="groupsDrop" class="form-control"></select>
+            </div>
+          </div>
 
           <div class="row">
             <div class="col-sm-2">
@@ -130,7 +130,7 @@
               </p>
             </div>
             <div class="col-sm-3">
-              <select data-ng-options="r.name for r in readers" ng-model="readersDrop" class="form-control"></select>
+              <select data-ng-options="r.name for r in readers" ng-change="changeReader(readersDrop, {{readersDrop}})" ng-model="readersDrop" class="form-control"></select>
             </div>
           </div>
 
@@ -169,8 +169,8 @@
             </div>
             <div class="col-sm-2">
               <p> State: </p>
-              <select data-ng-options="s.name for s in states" ng-model="statesDrop1" class="form-control"></select>
-              <select data-ng-options="s.name for s in states" ng-model="statesDrop2" class="form-control"></select>
+              <select data-ng-options="s.name for s in states" ng-change="changeState1(statesDrop1, {{statesDrop1}})" ng-model="statesDrop1" class="form-control"></select>
+              <select data-ng-options="s.name for s in states" ng-change="changeState2(statesDrop2, {{statesDrop2}})" ng-model="statesDrop2" class="form-control"></select>
             </div>
             <div class="col-sm-2">
               <p> Zip Code: </p>
@@ -232,5 +232,6 @@
           <button class="btn btn-default" type="button" ng-click="saveEdit()">Save</button>
         </div>
         <!-- End of editing div -->
+      </div>
     </div>
 </div>
