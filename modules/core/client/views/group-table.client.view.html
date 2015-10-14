@@ -16,11 +16,11 @@
         </script>
         <accordion close-others="oneAtATime">
             <accordion-group ng-repeat="group in groups">
+                <button type="button" class="btn btn-default pull-right studypage" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
+                    Group Data
+                </button>
                 <accordion-heading>
                     {{group.title}}
-                    <button type="button" class="btn btn-default pull-right studypage" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
-                        Group Data
-                    </button>
                 </accordion-heading>
                 <table class="studyTable">
                     <tr>
