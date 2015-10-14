@@ -11,143 +11,60 @@
             </ul>
         </div>
     </form>
-
     <div class="container header-bar">
         <img class="logo" src="http://i736.photobucket.com/albums/xx1/Cory_Turco/header.php_zpsnnwvbddh.png">
-
         <h1 class="head" align="center">Study Name</h1>
-
     </div>
-
     <div top="20%">
         <ul class="breadcrumb" style="width:100%">
             <li>
                 <a href="#/">Home</a>
             </li>
         </ul>
-
     </div>
-
-
-
     <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
        Group 1
     </button>
-
-
     <div ng-controller="AccordionCtrl">
-      <script type="text/ng-template" id="group-template.html">
-        <div class="panel {{panelClass || 'panel-default'}}">
-          <div class="panel-heading">
-            <h4 class="panel-title" style="color:#fa39c3">
-              <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading"><span
-                ng-class="{'text-muted': isDisabled}">{{heading}}</span></a>
-            </h4>
-
-          </div>
-          <div class="panel-collapse collapse" uib-collapse="!isOpen">
-            <div class="panel-body" style="text-align: right" ng-transclude></div>
-          </div>
-        </div>
-      </script>
-      <accordion close-others="oneAtATime">
-        <accordion-group ng-repeat="group in groups">
-            <accordion-heading>
-                {{group.title}}
-
-                <button type="button" class="btn btn-default pull-right studypage" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
-                    Group Data
-                </button>
-            </accordion-heading>
-            <table class="studyTable">
-                <tr>
-                    <th>Name</th>
-                    <th>Reader Number</th>
-                    <th>Complience</th>
-                </tr>
-                <tr>
-                    <td>{{group.content}}</td>
-                    <td>{{group.reader}}</td>
-                    <td>{{group.complience}}</td>
-                </tr>
-            </table>
-        </accordion-group>
-      </accordion>
-  </div>
-
-
+        <script type="text/ng-template" id="group-template.html">
+            <div class="panel {{panelClass || 'panel-default'}}">
+                <div class="panel-heading">
+                    <h4 class="panel-title" style="color:#fa39c3">
+                        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+                            <span ng-class="{'text-muted': isDisabled}">{{heading}}</span>
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse" uib-collapse="!isOpen">
+                    <div class="panel-body" style="text-align: right" ng-transclude>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <accordion close-others="oneAtATime">
+            <accordion-group ng-repeat="group in groups">
+                <accordion-heading>
+                    {{group.title}}
+                    <button type="button" class="btn btn-default pull-right studypage" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
+                        Group Data
+                    </button>
+                </accordion-heading>
+                <table class="studyTable">
+                    <tr>
+                        <th>Name</th>
+                        <th>Reader Number</th>
+                        <th>Complience</th>
+                    </tr>
+                    <tr>
+                        <td>{{group.content}}</td>
+                        <td>{{group.reader}}</td>
+                        <td>{{group.complience}}</td>
+                    </tr>
+                </table>
+            </accordion-group>
+        </accordion>
+    </div>
     <div class="enroll_button">
         <button type="button" class="btn btn-primary" data-toggle="button" ui-sref="enrollment">Enroll New Subject</button>
-    </div>
-                <div id="demo1" class="collapse">
-                    <table class="studyTable">
-                        <tr>
-                            <th>Name</th>
-                            <th>Reader Number</th>
-                            <th>Complience</th>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Reader43</td>
-                            <td>93% Complience</td>
-                        </tr>
-                        <tr>
-                            <td>Subject2</td>
-                            <td>Reader154</td>
-                            <td>93% Complience</td>
-                        </tr>
-                        <tr>
-                            <td>Subject3</td>
-                            <td>Reader11</td>
-                            <td>93% Complience</td>
-                        </tr>
-                        <tr>
-                            <td>Subject4</td>
-                            <td>Reader12</td>
-                            <td>93% Complience</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div class="accordion-group">
-                <div class="accordion-heading">
-
-                </div>
-                <div id="demo2" class="collapse">
-                    <div class="accordion-inner">
-                        <table class="studyTable">
-                            <tr>
-                                <th>Name</th>
-                                <th>Reader Number</th>
-                                <th>Complience</th>
-                            </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>Reader43</td>
-                                <td>93% Complience</td>
-                            </tr>
-                            <tr>
-                                <td>Subject2</td>
-                                <td>Reader154</td>
-                                <td>93% Complience</td>
-                            </tr>
-                            <tr>
-                                <td>Subject3</td>
-                                <td>Reader11</td>
-                                <td>93% Complience</td>
-                            </tr>
-                            <tr>
-                                <td>Subject4</td>
-                                <td>Reader12</td>
-                                <td>93% Complience</td>
-                            </tr>
-                        </table>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
+    </div>   
 </section>
