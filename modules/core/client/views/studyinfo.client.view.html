@@ -22,9 +22,7 @@
             </li>
         </ul>
     </div>
-    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
-       Group 1
-    </button>
+    <!--This div is for the accordion-->
     <div ng-controller="AccordionCtrl">
         <script type="text/ng-template" id="group-template.html">
             <div class="panel {{panelClass || 'panel-default'}}">
@@ -43,11 +41,11 @@
         </script>
         <accordion close-others="oneAtATime">
             <accordion-group ng-repeat="group in groups">
+                <button type="button" class="btn btn-default pull-right studypage" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
+                    Group Data
+                </button>
                 <accordion-heading>
                     {{group.title}}
-                    <button type="button" class="btn btn-default pull-right studypage" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
-                        Group Data
-                    </button>
                 </accordion-heading>
                 <table class="studyTable">
                     <tr>
@@ -64,6 +62,7 @@
             </accordion-group>
         </accordion>
     </div>
+    <!--button that leads to a page to enroll a new subject-->
     <div class="enroll_button">
         <button type="button" class="btn btn-primary" data-toggle="button" ui-sref="enrollment">Enroll New Subject</button>
     </div>   

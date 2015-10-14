@@ -49,6 +49,10 @@ angular.module('core').controller('AccordionCtrl', function ($scope) {
     isFirstOpen: true,
     isFirstDisabled: false
   };
+
+  $scope.redirect = function(){
+    $state.go('group-info');
+  };
 });
 
 
@@ -109,3 +113,4 @@ angular.module('core').directive('groupTable', function() {
     }
   };
 });
+
