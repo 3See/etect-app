@@ -10,5 +10,12 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
       $state.go('sign-in');
     }
 
+
+    $scope.studys = [
+    	{	name: 'Study 1' }, 
+    	{	name: 'Study 2' },
+    	{ 	name: 'Study 3' }
+    ];
+
   }
 ]);
