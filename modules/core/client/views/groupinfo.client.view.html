@@ -35,30 +35,32 @@
 
 
 
-    <table class="table table-condensed" id="subject_table">
-        <tr>
-            <th>Subject ID</th>
-            <th>Reader ID</th>
-            <th>Complience</th>
-        </tr>
+    <table class="table table-striped" id="subject_table">
+        <theader>
+            <tr>
+                <th>Subject ID</th>
+                <th>Reader ID</th>
+                <th>Complience</th>
+            </tr>
+        </theader>
         <!--Examples-->
-
-        <tr>
-            <td><button class="btn" ui-sref="subject-info">John Doe</button></td>
-            <td>123</td>
-            <td>Place holder information</td>
-        </tr>
-
-        <tr>
-            <td><button class="btn" ui-sref="subject-info">Jane Doe</button></td>
-            <td>145</td>
-            <td>Place holder information</td>
-        </tr>
-        <!---->
-        <tr ng-repeat="subject in Subject_list">
-            <td>{{subject.full_name}}</td>
-            <td>{{subject.reader_id}}</td>
-            <td>{{subject.complience}}</td>
-        </tr>
+        <tbody>
+            <tr>
+                <td><button class="btn" ui-sref="subject-info">John Doe</button></td>
+                <td>123</td>
+                <td>Place holder information</td>
+            </tr>
+            <tr>
+                <td><button class="btn" ui-sref="subject-info">Jane Doe</button></td>
+                <td>145</td>
+                <td>Place holder information</td>
+            </tr>
+            <!---->
+            <tr ng-repeat="subject in Subject_list">
+                <td><button class="btn" ui-sref="subject-info">{{subject.id}}</button></td>
+                <td>{{subject.reader_id}}</td>
+                <td>{{subject.complience}}</td>
+            </tr>
+        </tbody>
     </table>
 </section>
