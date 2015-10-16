@@ -1,19 +1,3 @@
-'use strict';
-
-angular.module('core').controller('StudyInfoController', ['$scope', 'Authentication', '$state',
-  function ($scope, Authentication, $state) {
-    // This provides Authentication context.
-    $scope.authentication = Authentication;
-
-    // If auth not set goto login
-    if(!Authentication.user) {
-      $state.go('sign-in');
-    }
-
-  }
-]);
-
-
 angular.module('core').controller('AccordionCtrl', function ($scope) {
   $scope.oneAtATime = true;
 
@@ -31,10 +15,10 @@ angular.module('core').controller('AccordionCtrl', function ($scope) {
       complience: '93%'
     },
     {
-    	title: 'Control',
-    	content: 'Jon Jones',
-    	reader: 'R054',
-      	complience: '85%'
+      title: 'Control',
+      content: 'Jon Jones',
+      reader: 'R054',
+        complience: '85%'
     }
   ];
 
@@ -54,4 +38,3 @@ angular.module('core').controller('AccordionCtrl', function ($scope) {
     $state.go('group-info');
   };
 });
-
