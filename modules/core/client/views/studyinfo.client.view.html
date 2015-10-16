@@ -4,108 +4,17 @@
             <li>
                 <a href="/">Home</a>
             </li>
+            <li class="active">
+                Study #
+            </li>
         </ul>
-
     </div>
-
-    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo1" ui-sref="group-info">
-        Group 1
-    </button>
-
-    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo2" ui-sref="group-info">
-        Group 2
-    </button>
-
-    <div class="enroll_button">
-        <button type="button" class="btn btn-primary" data-toggle="button" ui-sref="enrollment">Enroll New Subject</button>
-    </div>
-
-
-            <div class="panel {{panelClass || 'panel-default'}}">
-                <div class="panel-heading">
-                    <h4 class="panel-title" style="color:#fa39c3">
-                        <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()"
-                           accordion-transclude="heading"><span
-                                ng-class="{'text-muted': isDisabled}">{{heading}}</span></a>
-                    </h4>
-                </div>
-                <div class="panel-collapse collapse" collapse="!isOpen">
-                    <div class="panel-body" style="text-align: right" ng-transclude></div>
-                </div>
-            </div>
-
-
-
-
-                <div id="demo1" class="collapse">
-                    <table class="studyTable">
-                        <tr>
-                            <th>Name</th>
-                            <th>Reader Number</th>
-                            <th>Complience</th>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Reader43</td>
-                            <td>93% Complience</td>
-                        </tr>
-                        <tr>
-                            <td>Subject2</td>
-                            <td>Reader154</td>
-                            <td>93% Complience</td>
-                        </tr>
-                        <tr>
-                            <td>Subject3</td>
-                            <td>Reader11</td>
-                            <td>93% Complience</td>
-                        </tr>
-                        <tr>
-                            <td>Subject4</td>
-                            <td>Reader12</td>
-                            <td>93% Complience</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div class="accordion-group">
-                <div class="accordion-heading">
-
-                </div>
-                <div id="demo2" class="collapse">
-                    <div class="accordion-inner">
-                        <table class="studyTable">
-                            <tr>
-                                <th>Name</th>
-                                <th>Reader Number</th>
-                                <th>Complience</th>
-                            </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>Reader43</td>
-                                <td>93% Complience</td>
-                            </tr>
-                            <tr>
-                                <td>Subject2</td>
-                                <td>Reader154</td>
-                                <td>93% Complience</td>
-                            </tr>
-                            <tr>
-                                <td>Subject3</td>
-                                <td>Reader11</td>
-                                <td>93% Complience</td>
-                            </tr>
-                            <tr>
-                                <td>Subject4</td>
-                                <td>Reader12</td>
-                                <td>93% Complience</td>
-                            </tr>
-                        </table>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <button type="button" class="btn btn-primary" data-toggle="button" ui-sref="enrollment">Enroll New Subject</button>
+        </div> 
+    </div>  
+    <!--This directive is for the accordion-->
+    <group-table></group-table>
+    <!--button that leads to a page to enroll a new subject-->
 </section>

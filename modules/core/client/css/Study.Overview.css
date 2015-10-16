@@ -25,7 +25,7 @@ h1.study_page {
 table.studyTable {
 
     border-collapse: separate;
-    border-spacing: 10px;
+    border-spacing: 20px;   
 }
 
 
@@ -41,11 +41,7 @@ td.study_page {
   vertical-align: bottom;
 }
 
-div.enroll_button {
-  position: absolute;
-  top: 20%;
-  right: 10%;
-}
+
 
 
 
