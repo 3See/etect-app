@@ -29,6 +29,10 @@ angular.module('users').config(['$stateProvider',
         url: '/picture',
         templateUrl: 'modules/users/views/settings/change-profile-picture.client.view.html'
       })
+      .state('subject', {
+        url: '/subject',
+        templateUrl: 'modules/users/views/subject/subject.client.view.html'
+      })
       .state('authentication', {
         abstract: true,
         url: '/authentication',
