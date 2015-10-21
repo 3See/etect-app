@@ -1,0 +1,64 @@
+<div id="todo" class="container-fluid" data-ng-controller="SubjectSelectController">
+
+    <span class="panel panel-default col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8" style="border: 0;">
+      <H2>Subject Setup</H2>
+      <p>You may view an existing record/respond by selecting it from one of the drop-down lists below. The records are separated into each drop-down list according to their status for this particular data collection instrument. To create a new record/response, type a new value in the text box below and hit Tab or Enter. To quickly find a record without using the drop-downs, the text box will auto-populate with existing record names as you begin to type in it, allowing you to select it.</p>
+      </span>
+    <span class="panel panel-default col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8">
+
+      <div class="row text-left" style="background-color:khaki;">
+        <h3>Total records:</h3>
+      </div>
+      <br />
+      <div class="row text-left">
+        <h4 class="col-md-6">Incomplete records:</h4>
+        <p class="col-md-6">
+          <select ng-model="incompleteRecords" class="form-control"></select>
+        </p>
+      </div>
+
+      <div class="row text-left">
+        <h4 class="col-md-6">Complete records:</h4>
+        <p class="col-md-6">
+        <select ng-model="completeRecords" class="form-control"></select>
+      </p>
+      </div>
+
+      <div class="row text-left">
+        <h4 class="col-md-6">Enter a new or existing subject ID:</h4>
+        <p class="col-md-6">
+          <input type="text" ng-model="subjectID" class="form-control"></input>
+        </p>
+      </div>
+      <div class="row text-right">
+        <a href="#">Show Unverified Records above</a>
+      </div>
+      <br />
+
+      <div class="row text-left" style="background-color:khaki;">
+        <h3>Data Search</h3>
+      </div>
+      <br />
+      <div class="row text-left">
+        <span class="col-md-6"><h4>Choose a field to search</h4>
+        <p>(excludes multiple choice fields)</p>
+        </span>
+        <p class="col-md-6">
+          <select ng-model="chooseField" class="form-control"></select>
+        </p>
+      </div>
+
+      <div class="row text-left">
+        <span class="col-md-6"><h4>Search query</h4>
+          <p>Begin typing to search the project data, then click an item in the list to navigate to that record</p>
+        </span>
+        <span class="col-md-6">
+          <br />
+          <input type="text" ng-model="search" class="form-control"></input>
+        </span>
+      </div>
+
+
+    </span>
+
+</div>
