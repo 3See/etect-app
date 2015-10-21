@@ -29,6 +29,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
                 url: '/subject-info',
                 templateUrl: 'modules/core/views/subjectinfo.client.view.html'
             })
+            .state('subject-select', {
+                url: '/subject-select',
+                templateUrl: 'modules/core/views/subjectselect.client.view.html'
+            })
             .state('group-info', {
                 url: '/study-group',
                 templateUrl: 'modules/core/views/groupinfo.client.view.html'
