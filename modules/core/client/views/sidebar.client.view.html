@@ -1,0 +1,36 @@
+<section ng-controller="sidebarCtrl" id="sidebar">
+    <div>
+        <nav>
+            <ul id="section-tabs">
+                <!--
+                <li>Study</li>
+                <li ng-repeat="study in studys">
+                    <button type="button" class="btn btn-transparent btn-block" data-toggle="button" ui-sref="study-info">{{study}}</button>
+                </li>
+            -->
+                <!--
+                <li>Group</li>
+                <li ng-repeat="group in groups">
+                    <button type="button" class="btn btn-transparent btn-block" data-toggle="button" ui-sref="group-info">{{group}}</button>
+                </li>
+                -->
+                <li>Current Study</li>
+                <li>
+                    <button type="button" class="btn btn-transparent btn-block" data-toggle="button" ui-sref="home">Dashboard</button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-transparent btn-block" data-toggle="button" ui-sref="subject-status">Record Status</button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-transparent btn-block" data-toggle="button" ui-sref="">Search Records</button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-transparent btn-block" data-toggle="button" ui-sref="enrollment">New Enrollment</button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-transparent btn-block" data-toggle="button" ui-sref="">Calendar</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
