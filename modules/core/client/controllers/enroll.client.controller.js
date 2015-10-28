@@ -19,11 +19,11 @@ angular.module('core').controller('EnrollController', ['$scope', 'Authentication
       }).error(function (response) {
         $scope.error = response.message;
       });
-    }
+    };
 
 
     $scope.cancel = function () {
       $state.go($state.previous.state.name || 'home', $state.previous.params);
-    }
+    };
   }
 ]);

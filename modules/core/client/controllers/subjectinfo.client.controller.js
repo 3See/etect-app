@@ -11,10 +11,10 @@ angular.module('core').controller('SubjectInfoController', ['$scope', 'Authentic
     }
 
     //scope variables
-  $scope.info = {fullName: "John Doe", group:"Group 1", patientID:"123456789", readerID:"123456789", startDate:"01/02/03", endDate:"02/03/04", address1:"123 S Main St", city1:"Gainesville", state1:"FL", zip1:"21601", address2:"5050 W University Ave. PO Box 90909", city2:"Gainesville", state2:"FL", zip2:"32607", phone1:"813-555-1234", phone2:"813-555-4321", emergencyContact1:{name:"Jane Doe", relationship:"Wife", phone:"352-555-5678"}, emergencyContact2:{name:"Jack Doe", relationship:"Brother", phone:"813-555-3636"}};
-  $scope.groups = [{name:"Group 1"}, {name:"Group 2"}, {name:"Group 3"}];
-  $scope.readers = [{name:"R15"}, {name:"R17"}, {name:"R18"}];
-  $scope.states = [{name:"FL"},{name:"CA"},{name:"NH"}];
+  $scope.info = {fullName: 'John Doe', group:'Group 1', patientID:'123456789', readerID:'123456789', startDate:'01/02/03', endDate:'02/03/04', address1:'123 S Main St', city1:'Gainesville', state1:'FL', zip1:'21601', address2:'5050 W University Ave. PO Box 90909', city2:'Gainesville', state2:'FL', zip2:'32607', phone1:'813-555-1234', phone2:'813-555-4321', emergencyContact1:{name:'Jane Doe', relationship:'Wife', phone:'352-555-5678'}, emergencyContact2:{name:'Jack Doe', relationship:'Brother', phone:'813-555-3636'}};
+  $scope.groups = [{name:'Group 1'}, {name:'Group 2'}, {name:'Group 3'}];
+  $scope.readers = [{name:'R15'}, {name:'R17'}, {name:'R18'}];
+  $scope.states = [{name:'FL'},{name:'CA'},{name:'NH'}];
   $scope.editBool = false;
   $scope.tempGroup = $scope.groups[0].name;
   $scope.tempReader = $scope.readers[0].name;
@@ -25,7 +25,7 @@ angular.module('core').controller('SubjectInfoController', ['$scope', 'Authentic
   //Toggle edit function used when starting to edit and when canceled editing
   $scope.toggleEdit = function(index) {
     //Fil the input boxes with the current data
-    console.log("toggled edit display.");
+    console.log('toggled edit display.');
     $scope.fullName = $scope.info.fullName;
     $scope.groupsDrop = $scope.groups[0];
     $scope.readersDrop = $scope.readers[0];
@@ -54,35 +54,35 @@ angular.module('core').controller('SubjectInfoController', ['$scope', 'Authentic
 
 
     //Change the boolen value to toggle the html elements
-    if ($scope.editBool == false) {
+    if ($scope.editBool === false) {
       $scope.editBool = true;
     } else {
       $scope.editBool = false;
     }
-  }
+  };
 
   //Function needed to keep track of the group drop down list
   $scope.changeGroup = function(newObj, oldObj){
    console.log(newObj.name);
    $scope.tempGroup = newObj.name;
-  }
+  };
   //Function needed to keep track of the reader drop down list
   $scope.changeReader = function(newObj, oldObj){
    console.log(newObj.name);
    $scope.tempReader = newObj.name;
-  }
+  };
 
   //Function needed to keep track of the state1 drop down list
   $scope.changeState1 = function(newObj, oldObj){
    console.log(newObj.name);
    $scope.tempState1 = newObj.name;
-  }
+  };
 
   //Function needed to keep track of the state2 drop down list
   $scope.changeState2 = function(newObj, oldObj){
    console.log(newObj.name);
    $scope.tempState2 = newObj.name;
-  }
+  };
     
   //Function that save the data when the save button is pressed in the editing mode
   $scope.saveEdit = function() {
@@ -115,7 +115,7 @@ angular.module('core').controller('SubjectInfoController', ['$scope', 'Authentic
 
     //Change the boolen value to toggle the html elements
     $scope.editBool = false;
-  }
+  };
 
 
 }]);
