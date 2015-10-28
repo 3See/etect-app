@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('core').controller('GroupCtrl', function ($scope, $log) {
+angular.module('core').controller('GroupCtrl', function ($scope) {
   $scope.items = [
     'Group 1',
     'Group 2',
@@ -9,10 +9,6 @@ angular.module('core').controller('GroupCtrl', function ($scope, $log) {
 
   $scope.status = {
     isopen: false
-  };
-
-  $scope.toggled = function(open) {
-    $log.log('Dropdown is now: ', open);
   };
 
   $scope.toggleDropdown = function($event) {
