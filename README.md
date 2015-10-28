@@ -19,12 +19,12 @@
 > A sidebar directive has been added to every page after logging in for ease of access and better UI experience.
 
 ###New Views
->*	Subject Status
->	Shows a subject's ID, group, reader ID, and status(complete, incomplete, or unverified). 
->* Subject Setup
->	Assign a subject to a group, a reader, and input a phone number and a start and end date. This page also records >ingestions times/dates.
->* Subject Selection
->	Search for and select a specific subject in order to view or edit their information
+>*	Subject Status  
+>---	Shows a subject's ID, group, reader ID, and status(complete, incomplete, or unverified). 
+>* Subject Setup  
+>---	Assign a subject to a group, a reader, and input a phone number and a start and end date. This page also records ingestions times/dates.
+>* Subject Selection  
+>---	Search for and select a specific subject in order to view or edit their information
 
 ###Standardized Header
 > A consistent header has been added to every page for better UI look and feel.
