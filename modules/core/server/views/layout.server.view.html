@@ -38,18 +38,21 @@
 </head>
 
 <body class="ng-cloak">
-  <header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-  <!--Found in index.server.view.html-->
-  <section class="banner">
-    <section class="container">
+  <div class="container">
+    <header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
+    <!--Found in index.server.view.html-->
+    <!--
+    <section id="sidebar">
+      {% block sidebar %}{% endblock %}
+    </section>
+  -->
+    <section id="banner">
       {% block banner %}{% endblock %}
     </section>
-  </section>
-  <section class="content">
-    <section class="container">
-      {% block content %}{% endblock %}
+    <section>
+        {% block content %}{% endblock %}
     </section>
-  </section>
+  </div>
 
   <!--Embedding The User Object-->
   <script type="text/javascript">

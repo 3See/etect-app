@@ -117,6 +117,7 @@ angular.module('core').controller('DatepickerDemoCtrl', function ($scope) {
   $scope.maxDate = new Date(2020, 5, 22);
 
   $scope.open = function($event) {
+    console.log("Check");
     $scope.status.opened = true;
   };
 
