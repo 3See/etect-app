@@ -38,19 +38,22 @@
 </head>
 
 <body class="ng-cloak">
-  <header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-  <!--Found in index.server.view.html-->
-  <section class="banner">
-    <section class="container">
-      {% block banner %}{% endblock %}
+    <header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
+    <!--Found in index.server.view.html-->
+    <!--
+    <section id="sidebar">
+      {% block sidebar %}{% endblock %}
     </section>
-  </section>
-  <section class="content">
+  -->
     <section class="container">
-      {% block content %}{% endblock %}
+      <section id="banner">
+        {% block banner %}{% endblock %}
+      </section>
     </section>
-  </section>
-
+    <section class="container">
+        {% block content %}{% endblock %}
+    </section>
+  
   <!--Embedding The User Object-->
   <script type="text/javascript">
     var user = {{ user | json | safe }};

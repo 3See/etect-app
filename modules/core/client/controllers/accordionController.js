@@ -1,4 +1,6 @@
-angular.module('core').controller('AccordionCtrl', function ($scope) {
+'use strict';
+
+angular.module('core').controller('AccordionCtrl', function ($scope, $state) {
   $scope.oneAtATime = true;
 
   $scope.groups = [

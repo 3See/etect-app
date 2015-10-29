@@ -14,7 +14,7 @@ angular.module('core').controller('StudyInfoController', ['$scope', 'Authenticat
 ]);
 
 
-angular.module('core').controller('AccordionCtrl', function ($scope) {
+angular.module('core').controller('AccordionCtrl', function ($scope, $state) {
   $scope.oneAtATime = true;
 
   $scope.groups = [
