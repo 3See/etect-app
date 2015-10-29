@@ -22,23 +22,23 @@
           <!-- End Date -->
           <p>End Date: {{info.endDate}}</p>
 
-          <br />
+          
           <!-- layout for addresses: -->
 
           <!-- Display Addresses -->
-          <p> Address: </p>
+          <p class="smallBreak"> Address: </p>
           <p>{{info.address1}}</p>
           <p>{{info.city1}} , {{info.state1}}. {{info.zip1}}</p>
-          </br>
-          <p> Address 2: </p>
+          
+          <p class="smallBreak"> Address 2: </p>
           <p>{{info.address2}}</p>
           <p>{{info.city2}} , {{info.state2}}. {{info.zip2}}</p>
 
-          <br />
+          
           <!-- layout for phone #'s: -->
 
           <!-- Display numbers -->
-          <p> Phone: {{info.phone1}} </p>
+          <p class="smallBreak"> Phone: {{info.phone1}} </p>
           <p> Phone 2: {{info.phone2}} </p>
 
           <!-- layout for emergency contacts: -->
@@ -48,12 +48,11 @@
               
           <!-- Display the contact info -->
           <p>Name: {{info.emergencyContact1.name}}</p>
-          <p>Name: {{info.emergencyContact2.name}}</p>
-
           <p> Relationship: {{info.emergencyContact1.relationship}}</p>
-          <p> Relationship: {{info.emergencyContact2.relationship}}</p>
-
           <p> Phone: {{info.emergencyContact1.phone}}</p>
+          
+          <p class="smallBreak">Name: {{info.emergencyContact2.name}}</p>
+          <p> Relationship: {{info.emergencyContact2.relationship}}</p>
           <p> Phone: {{info.emergencyContact2.phone}}</p>
 
           <!-- Edit column -->
