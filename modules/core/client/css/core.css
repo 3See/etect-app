@@ -38,3 +38,43 @@ button.studypage {
   position: relative;
   bottom: 9px;
 }
+
+.container {
+  position: relative;
+  padding: 0 5px 0 225px;
+  margin: 0 0 0 0;
+  width: 100%;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 220px;
+  background: #A0A0A0;
+  border-right: 1px solid #000;
+  padding-top: 55px;
+}
+
+#header {
+  margin: 0 0 0 0;
+  position: absolute;
+}
+
+#content {
+  border: 1px solid #A0A0A0;
+  margin: 5px 0 5px 0;
+  width: 100%;
+
+}
+
+#section-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.smallBreak {
+  padding-top: 15px;
+}

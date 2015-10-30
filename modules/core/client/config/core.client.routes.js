@@ -44,6 +44,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
             .state('subject-status', {
                 url: '/subject-status',
                 templateUrl: 'modules/core/views/subject.status.client.view.html'
+            })
+            .state('subject-setup', {
+                url: '/subject-setup',
+                templateUrl: 'modules/core/views/subject_setup.client.view.html'
             });
     }
 ]);
