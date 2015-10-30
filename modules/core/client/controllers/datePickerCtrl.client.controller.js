@@ -1,4 +1,5 @@
 angular.module('core').controller('DatepickerDemoCtrl', function ($scope) {
+  /*
   $scope.today = function() {
     $scope.dt = new Date();
   };
@@ -68,4 +69,5 @@ angular.module('core').controller('DatepickerDemoCtrl', function ($scope) {
 
     return '';
   };
+  */
 });
