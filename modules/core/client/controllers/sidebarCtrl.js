@@ -12,18 +12,18 @@ angular.module('core').controller('sidebarCtrl', ['$scope', 'Authentication', '$
 
     console.log('connected');
 
-    $scope.ID = "105";
+    $scope.ID = '105';
 
     $scope.studys = [
-      "Study 1",
-      "Study 2",
-      "Study 3"
+      'Study 1',
+      'Study 2',
+      'Study 3'
     ];
     
     $scope.groups = [
-      "Group 1",
-      "Group 2",
-      "Control"
+      'Group 1',
+      'Group 2',
+      'Control'
     ];
 
   }
