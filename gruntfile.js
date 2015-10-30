@@ -221,17 +221,16 @@ module.exports = function (grunt) {
   });
 
   // Connect to the MongoDB instance and load the models
-  grunt.task.registerTask('mongoose', 'Task that connects to the MongoDB instance and loads the application models.', function () {
+  grunt.task.registerTask('mssql', 'Task that connects to the MSSQL instance .', function () {
     // Get the callback
     var done = this.async();
 
-    // Use mongoose configuration
-    var mongoose = require('./config/lib/mongoose.js');
+    // Use seriate configuration
+    var seriate = require('seriate');
 
     // Connect to database
-    mongoose.connect(function (db) {
-      done();
-    });
+    seriate.addConnection(db);
+
   });
 
   grunt.task.registerTask('server', 'Starting the server', function () {
