@@ -48,6 +48,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
             .state('subject-setup', {
                 url: '/subject-setup',
                 templateUrl: 'modules/core/views/subject_setup.client.view.html'
+            })
+            .state('reports', {
+                url: '/reports',
+                templateUrl: 'modules/core/views/reports.client.view.html'
             });
     }
 ]);
