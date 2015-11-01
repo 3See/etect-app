@@ -10,7 +10,7 @@ angular.module('core').controller('reportController', ['$scope', 'Authentication
       $state.go('sign-in');
     }
 
-    $scope.study_name = 'Study 1'
+    $scope.study_name = 'Study 1';
 
 	$scope.ingestions = [
       'Ingestion 1',
