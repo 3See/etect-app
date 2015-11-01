@@ -10,7 +10,7 @@ angular.module('core').controller('SubjectStatusController', ['$scope', 'Authent
       $state.go('sign-in');
     }
 
-    $scope.study_name = "Study Name";
+    $scope.study_name = 'Study Name';
 
     
 

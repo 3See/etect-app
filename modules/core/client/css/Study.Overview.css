@@ -18,8 +18,8 @@ h1.study_page {
   bottom: 20%;
   text-align: center;
   vertical-align: bottom;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 table.studyTable {
@@ -37,38 +37,32 @@ div.studyTitle {
 }
 
 td.study_page {
-  padding-bottom: 0px;
+  padding-bottom: 0;
   vertical-align: bottom;
 }
 
-
-
-
-
-#buttons li {
+/*MAY not need to be used. appears to be depreciated*/
+.buttons li {
 	display: block;
     list-style: none;
     text-decoration: none;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #000;
     margin-bottom: 5px;
     width: 450px;
     line-height: 40px;
-
 }
 
 
 .logoutLblPos{
 
    position:fixed;
-   right:0px;
-   top:0px;
+   right:0;
+   top:0;
 }
 
-#buttons button {
-
-
+/*MAY not need to be used. appears to be depreciated*/
+.buttons button {
     width: 450px;
     line-height: 40px;
-
 }
