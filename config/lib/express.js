@@ -106,7 +106,7 @@ module.exports.initViewEngine = function (app) {
   app.set('views', './');
 };
 
-/**
+/*
  * Configure Express session
  */
 module.exports.initSession = function (app, db) {
