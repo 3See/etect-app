@@ -4,20 +4,22 @@
  * Module dependencies.
  */
 var config = require('../config'),
-	mongoose = require('./mongoose'),
+    // mongoose = require('./mongoose'),
+    sequelize = require('./sequelize'),
 	express = require('./express'),
 	chalk = require('chalk');
 
 // Initialize Models
-mongoose.loadModels();
+sequelize.loadModels();
 
 module.exports.loadModels = function loadModels() {
-	mongoose.loadModels();
+	sequelize.loadModels();
 };
+
 
 module.exports.init = function init(callback) {
 
-	mongoose.connect(function (db) {
+	sequelize.connect(function (db) {
 		// Initialize express
 		var app = express.init(db);
 		if (callback) callback(app, db, config);
@@ -38,15 +40,14 @@ module.exports.start = function start(callback) {
 			console.log(chalk.green(config.app.title));
 			console.log(chalk.green('Environment:\t\t\t' + process.env.NODE_ENV));
 			console.log(chalk.green('Port:\t\t\t\t' + config.port));
-			console.log(chalk.green('Database:\t\t\t\t' + config.db.uri));
+			console.log(chalk.green('Database:\t\t\t\t' + config.db));
 			if (process.env.NODE_ENV === 'secure') {
 				console.log(chalk.green('HTTPs:\t\t\t\ton'));
 			}
 			console.log('--');
 
 			if (callback) callback(app, db, config);
+
 		});
-
 	});
-
 };

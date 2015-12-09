@@ -116,11 +116,11 @@ gulp.task('less', function () {
 // Mocha tests task
 gulp.task('mocha', function (done) {
   // Open mongoose connections
-  var mongoose = require('./config/lib/mongoose.js');
+  var sequelize = require('./config/lib/sequelize.js');
   var error;
 
-  // Connect mongoose
-  mongoose.connect(function() {
+  // Connect sequelize
+  sequelize.connect(function() {
     // Run the tests
     gulp.src(testAssets.tests.server)
       .pipe(plugins.mocha({
@@ -132,7 +132,7 @@ gulp.task('mocha', function (done) {
       })
       .on('end', function() {
         // When the tests are done, disconnect mongoose and pass the error state back to gulp
-        mongoose.disconnect(function() {
+        sequelize.disconnect(function() {
           done(error);
         });
       });
